@@ -1,0 +1,40 @@
+TestCaseName: test_auth_flow_001
+TestCaseID: TC_076
+Module: module_auth
+Status: FAILED
+ExceptionType: DatabaseError
+FilePath: tests/module_auth/test_auth_01.py
+Steps:
+StackTrace:
+request = <FixtureRequest for <Function test_module_auth[TC_076:test_auth_flow_001]>>
+data = {'file_relpath': 'tests/module_auth/test_auth_01.py', 'module': 'module_auth', 'name': 'test_auth_flow_001', 'scenario': 'auth_error', ...}
+
+    @pytest.mark.parametrize("data", CASES, ids=[c["tc_id"] + ":" + c["name"] for c in CASES])
+    def test_module_auth(request, data):
+        # attach per-test recorder to node
+        recorder = TestRecorder(tc_id=data["tc_id"], name=data["name"], module=data["module"], file_relpath=data["file_relpath"])
+        request.node.test_recorder = recorder
+        drv = DummyWebDriver()
+    
+        # Step 1: authentication
+        recorder.step("Step 1: Begin authentication")
+        if data["scenario"] == "auth_error":
+            try:
+>               login('bad_user')
+
+tests\module_auth\test_auth_01.py:91: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+user = 'bad_user'
+
+    def login(user: str) -> bool:
+        logger = logging.getLogger('AUTH')
+        logger.info(f"AUTH | Attempting login for user='{user}'")
+        if user == 'bad_user':
+            logger.error("AUTH | Authentication failed for user='bad_user'")
+>           raise ValueError('DatabaseError')
+E           ValueError: DatabaseError
+
+utils\auth.py:9: ValueError
+  - Step 1: Begin authentication
+  - Authentication failed with DatabaseError

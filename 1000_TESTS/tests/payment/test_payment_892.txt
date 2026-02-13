@@ -1,0 +1,16 @@
+TestCaseName: test_payment_892
+TestCaseID: TC_892
+Module: module_payment
+Status: FAILED
+ExceptionType: PermissionDeniedException
+FilePath: tests/payment/test_payment.py
+Steps:
+  - Step 1: Begin authentication
+  - Authentication failed with AuthenticationError
+  - Step 2: Navigate to feature and check permissions
+  - Navigation failed on get()
+  - Step 3: Interact with UI and validate state
+  - Permission check failed with 403
+  - Step 4: Test completed with failure
+StackTrace:
+Traceback (most recent call last): ... PermissionDeniedException

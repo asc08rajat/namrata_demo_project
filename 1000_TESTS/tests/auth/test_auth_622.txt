@@ -1,0 +1,16 @@
+TestCaseName: test_auth_622
+TestCaseID: TC_622
+Module: module_auth
+Status: FAILED
+ExceptionType: PermissionDeniedException
+FilePath: tests/auth/test_auth.py
+Steps:
+  - Step 1: Begin authentication
+  - Authentication failed with AuthenticationError
+  - Step 2: Navigate to feature and check permissions
+  - Navigation failed on get()
+  - Step 3: Interact with UI and validate state
+  - Permission check failed with 403
+  - Step 4: Test completed with failure
+StackTrace:
+Traceback (most recent call last): ... PermissionDeniedException

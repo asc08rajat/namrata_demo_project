@@ -1,0 +1,16 @@
+TestCaseName: test_payment_891
+TestCaseID: TC_891
+Module: module_payment
+Status: FAILED
+ExceptionType: NavigationException
+FilePath: tests/payment/test_payment.py
+Steps:
+  - Step 1: Begin authentication
+  - Authentication failed with AuthenticationError
+  - Step 2: Navigate to feature and check permissions
+  - Navigation failed on get()
+  - Step 3: Interact with UI and validate state
+  - Navigation failed on get()
+  - Step 4: Test completed with failure
+StackTrace:
+Traceback (most recent call last): ... NavigationException

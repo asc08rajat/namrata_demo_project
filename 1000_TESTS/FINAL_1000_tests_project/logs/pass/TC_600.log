@@ -1,0 +1,14 @@
+TestCaseName: test_search_flow_130
+TestCaseID: TC_600
+Module: module_cart
+Status: PASSED
+ExceptionType: None
+FilePath: tests/module_cart/test_case_130.py
+Steps:
+  - Step 1: Begin authentication
+  - Authentication successful
+  - Step 2: Navigate to feature and check permissions
+  - Navigation successful
+  - Step 3: Interact with UI and validate state
+  - Element located and state validated
+  - Step 4: Test completed successfully

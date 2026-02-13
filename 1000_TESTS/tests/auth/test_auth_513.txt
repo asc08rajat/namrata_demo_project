@@ -1,0 +1,16 @@
+TestCaseName: test_auth_513
+TestCaseID: TC_513
+Module: module_auth
+Status: FAILED
+ExceptionType: TimeoutError
+FilePath: tests/auth/test_auth.py
+Steps:
+  - Step 1: Begin authentication
+  - Authentication failed with AuthenticationError
+  - Step 2: Navigate to feature and check permissions
+  - Navigation failed on get()
+  - Step 3: Interact with UI and validate state
+  - Operation timed out
+  - Step 4: Test completed with failure
+StackTrace:
+Traceback (most recent call last): ... TimeoutError

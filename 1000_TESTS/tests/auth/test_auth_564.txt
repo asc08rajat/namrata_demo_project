@@ -1,0 +1,16 @@
+TestCaseName: test_auth_564
+TestCaseID: TC_564
+Module: module_auth
+Status: PASSED
+ExceptionType: None
+FilePath: tests/auth/test_auth.py
+Steps:
+  - Step 1: Begin authentication
+  - Authentication successful
+  - Step 2: Navigate to feature and check permissions
+  - Navigation successful
+  - Step 3: Interact with UI and validate state
+  - Element located and state validated
+  - Step 4: Test completed with success
+StackTrace:
+Traceback (most recent call last): ... None
